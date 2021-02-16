@@ -1,0 +1,62 @@
+
+.container{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+  }
+  
+ 
+  
+.slider{
+    
+
+    position: relative;
+    width: 90%;
+    height: 90%;
+
+
+    $numPages:5; //numero de paginas a mostrar
+    $timeTansition:1s; //tiempo de la transicion
+
+    @for $i from 1 to $numPages+1{
+        #slide#{$i}{
+            
+
+            position: absolute;
+            left: 50%;
+            top: 0px;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity $timeTansition , left $timeTansition;
+            //background:#fff;
+        //    img{
+        //        width: inherit;
+        //        height: inherit;
+        //        object-fit: cover; //ajusta la imagen para que no se deforme
+           
+        //     }
+       
+        }
+        @if $i == 1{
+            #slide#{$i}{
+                opacity: 1;
+                left: 0;
+                transition: opacity $timeTansition , left $timeTansition;
+            }
+        
+    }
+    
+    #slide#{$i}:target{
+        left: 0;
+        opacity: 1;
+        
+    }
+
+  }
+}
