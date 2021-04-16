@@ -27,11 +27,16 @@ ul, li {
 
 
 
+
 nav{
     display: grid;
-    height: 100px;
+    height: 90px;
     grid-template-columns: 1fr 1fr;
     align-content: center;
+    
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+   
     
     h3{
         padding: 0 20px;
@@ -153,9 +158,9 @@ nav{
         width: 50%;
     }
     .img-box{
-        width: 50%;
+        width: 55%;
         display: flex;
-        box-shadow: 0 0 5px 10px $customColor;
+        box-shadow: 0 2px 4px 0 rgba(0 ,0 ,0 ,0.12), 0 3px 1px -3px rgba(0, 0, 0, 0.11), 0 1px 6px 0 rgba(0, 0, 0,0.18);
         background-color: $customColor;
         margin: 20px;
         //opacity: 0.8;
@@ -301,3 +306,13 @@ nav{
     } 
 }
  
+@media only screen and (max-width : 770px){
+    body{
+        position: relative;
+    }
+    .works-container{
+        
+        height: 1024px;
+        flex-direction: column;
+    }
+}
