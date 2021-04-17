@@ -1,0 +1,117 @@
+.bg-blog{
+    display: grid;
+    height: 70%;
+    width: 100%;
+    background-color: $bgCustomColor;
+}
+
+.no-fixed{
+    position: relative;
+}
+
+.slider-show-project{
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden; //quito scroll horizontal
+    .ul-blogcss{
+        padding: 0;
+        display: flex;
+        width: 500%;
+
+        animation: cambioCss 20s infinite alternate linear;
+        animation-timing-function: ease-in;
+    }
+    .ul-blogmaterial{
+        padding: 0;
+        display: flex;
+        width: 400%;
+
+        animation: cambioMaterial 20s infinite alternate linear;
+        animation-timing-function: ease-in;
+    }
+
+    li{
+        list-style: none;
+    }
+    
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+   
+}
+
+@keyframes cambioCss{  
+    $numPages:5;
+    @for $i from 0 to $numPages {
+        @if $i==($numPages - 1) {
+        #{(100%/$numPages)*($i)} {margin-left: -#{($i)*100%};}
+        #{100%} {margin-left: -#{($i)*100%};} 
+
+        }@else{
+        #{(100%/$numPages)*($i)} {margin-left: -#{($i)*100%};}
+        #{(100%/5)*($i)+15} {margin-left: -#{($i)*100%};}
+        }
+    }
+}
+
+@keyframes cambioMaterial{  
+    $numPages:4;
+    @for $i from 0 to $numPages {
+        @if $i==($numPages - 1) {
+        #{(100%/$numPages)*($i)} {margin-left: -#{($i)*100%};}
+        #{100%} {margin-left: -#{($i)*100%};} 
+
+        }@else{
+        #{(100%/$numPages)*($i)} {margin-left: -#{($i)*100%};}
+        #{(100%/5)*($i)+15} {margin-left: -#{($i)*100%};}
+        }
+    }
+}
+
+.des-project{
+    margin: 10px 200px 40px 200px;
+    display: grid;
+    
+    section{
+        
+        width: 100%;
+        height: 200px;
+    }
+    p{
+        margin-bottom: 30px;
+    }
+    h1{
+        text-align: center;
+    }
+}
+
+.bt-float{
+    width: 150px;
+    text-align: center;
+    display: flex;
+    padding: 10px;
+    text-decoration: none;
+    top: 5%;
+    right: 2%;
+    background-color: $bgCustomColor;
+    position: fixed;
+    border:1px solid $customColor;
+    border-radius: 5px;
+    color: $customColor;
+    transition: color 1s;
+    transition: background-color 1s;
+    
+    &:hover{
+        background-color: white;
+        color:$linksColor;
+    }
+    
+    
+}
+// .blog-css{
+//     background-image: url("/assets/images/img-blog.png");
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }

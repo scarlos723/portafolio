@@ -177,6 +177,106 @@ nav {
 @media only screen and (max-width: 780px) {
   .container {
     background-color: chocolate; } }
+.bg-blog {
+  display: grid;
+  height: 70%;
+  width: 100%;
+  background-color: #edf4ff; }
+
+.no-fixed {
+  position: relative; }
+
+.slider-show-project {
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  overflow: hidden; }
+  .slider-show-project .ul-blogcss {
+    padding: 0;
+    display: flex;
+    width: 500%;
+    animation: cambioCss 20s infinite alternate linear;
+    animation-timing-function: ease-in; }
+  .slider-show-project .ul-blogmaterial {
+    padding: 0;
+    display: flex;
+    width: 400%;
+    animation: cambioMaterial 20s infinite alternate linear;
+    animation-timing-function: ease-in; }
+  .slider-show-project li {
+    list-style: none; }
+  .slider-show-project img {
+    width: 100%;
+    object-fit: cover; }
+
+@keyframes cambioCss {
+  0% {
+    margin-left: -0%; }
+  15% {
+    margin-left: -0%; }
+  20% {
+    margin-left: -100%; }
+  35% {
+    margin-left: -100%; }
+  40% {
+    margin-left: -200%; }
+  55% {
+    margin-left: -200%; }
+  60% {
+    margin-left: -300%; }
+  75% {
+    margin-left: -300%; }
+  80% {
+    margin-left: -400%; }
+  100% {
+    margin-left: -400%; } }
+@keyframes cambioMaterial {
+  0% {
+    margin-left: -0%; }
+  15% {
+    margin-left: -0%; }
+  25% {
+    margin-left: -100%; }
+  35% {
+    margin-left: -100%; }
+  50% {
+    margin-left: -200%; }
+  55% {
+    margin-left: -200%; }
+  75% {
+    margin-left: -300%; }
+  100% {
+    margin-left: -300%; } }
+.des-project {
+  margin: 10px 200px 40px 200px;
+  display: grid; }
+  .des-project section {
+    width: 100%;
+    height: 200px; }
+  .des-project p {
+    margin-bottom: 30px; }
+  .des-project h1 {
+    text-align: center; }
+
+.bt-float {
+  width: 150px;
+  text-align: center;
+  display: flex;
+  padding: 10px;
+  text-decoration: none;
+  top: 5%;
+  right: 2%;
+  background-color: #edf4ff;
+  position: fixed;
+  border: 1px solid #b2dfdb;
+  border-radius: 5px;
+  color: #b2dfdb;
+  transition: color 1s;
+  transition: background-color 1s; }
+  .bt-float:hover {
+    background-color: white;
+    color: #4db6ac; }
+
 .page-index {
   display: grid;
   position: relative;
